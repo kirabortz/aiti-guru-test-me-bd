@@ -4,7 +4,7 @@ import type { ProductsResponse } from "@/entities/product/product.types";
 export const productsApi = createApi({
   reducerPath: "productsApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:3000",
+    baseUrl: process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000",
   }),
   tagTypes: ["Products"],
   endpoints: (builder) => ({
