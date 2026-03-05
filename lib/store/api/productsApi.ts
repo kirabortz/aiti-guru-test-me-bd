@@ -26,7 +26,7 @@ export const productsApi = createApi({
           sortBy,
           order,
         });
-        return `/api/products?${params}`;
+        return `/products?${params}`;
       },
       providesTags: ["Products"],
     }),
