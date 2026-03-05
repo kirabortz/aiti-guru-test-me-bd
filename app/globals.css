@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-family: var(--font-cairo), sans-serif;
+  --second-family: var(--font-open-sans), sans-serif;
+  --third-family: var(--font-inter), sans-serif;
+  --font3: var(--font-roboto-mono), sans-serif;
+  --font4: var(--font-roboto), sans-serif;
+
+
+  --color-gray3: #f3f3f3;
+  --color-gray4: #ededed;
+  --color-gray5: #e2e2e2; 
+  --color-gray6: #c4c4c4;
+  --color-gray7: #ececeb;
+  --color-gray8: #b2b3b9;
+
+  --primary-blue-color: #3C538E; 
+  --dark-blue-color: #242edb;
+
+  --color-primary: #222222;
+  --bg-main: #f9f9f9;
+  --bg-login: #f6f6f6;
+
+  --input-bg: #ffffff;
+  --input-bg-secondary: var(--color-gray3);
+  --input-border: var(--color-gray4);
+  
+    .text-20px {
+      font-size: 1.25rem;
+    }
+    .text-18px {
+      font-size: 1.125rem; 
+    }
+}
+
+@layer utilities {
+  .text-shadow-inset {
+    text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.01);
+  }
+
+  .font-inter {
+    font-family: var(--third-family);
+  }
+
+  .font-second {
+    font-family: var(--font-open-sans);
+  }
+
+  .font-mono {
+    font-family: var(--font3);
+  }
+
+  .bg-gray3 { background-color: var(--color-gray3) }
+  .border-gray4 { border-color: var(--color-gray4) }
+  .border-b-gray5 { border-bottom-color: var(--color-gray5) }
+  .text-gray5 { color: var(--color-gray5) } 
+  .bg-gray6 { background-color: var(--color-gray6) }
+  .text-gray6 { color: var(--color-gray6) } 
+  .border-gray7 { border-color: var(--color-gray7) }
+  .text-gray8 { color: var(--color-gray8) }
+  .text-primary { color: var(--color-primary) } 
+}
+
+
+body {
+  background-color: var(--bg-main);
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
+}
+
+input {
+  border: 1px solid var(--input-border);
+  background-color: var(--input-bg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+table {
+  text-align: left;
+}
+
+.svg-inline--fa {
+  height: 1em;
+  width: 1em;
+}
+
+.fa-icon, 
+.fa-2xs, .fa-xs, .fa-sm, 
+.fa-lg, .fa-xl, .fa-2xl {
+  display: inline-block;
+}
+
+svg[class*="fa-"] {
+  font-size: inherit;
+  width: 1em;
+  height: 1em;
+}
+
+a {
+  color: var(--dark-blue-color)
+}
+
+

@@ -1,0 +1,13 @@
+.shadow {
+  box-shadow: 0 24px 32px 0 rgba(0, 0, 0, 0.04);
+  @apply w-auto md:w-[480px] bg-white p-[6px] rounded-[40px] my-10;
+}
+
+.panel {
+  background: linear-gradient(180deg, #23232308 0%, #23232300 50%);
+  @apply px-12 py-12 rounded-[34px];
+}
+
+.panel h1 {
+  letter-spacing: 0.03em;
+}
