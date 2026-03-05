@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
@@ -28,7 +28,10 @@ export const ProductsTable: React.FC = () => {
     order,
   });
 
-  const products: Product[] = isLoading ? getEmptyProducts(limit) : data?.products || [];
+  const products = useMemo(() => {
+    return isLoading ? getEmptyProducts(limit) : data?.products || [];
+  }, [isLoading, data, limit]);
+
   const total = data?.total || 0;
 
   useEffect(() => {

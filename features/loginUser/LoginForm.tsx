@@ -56,6 +56,7 @@ export const LoginForm: React.FC = () => {
       );
       const redirect = searchParams.get("redirect") || "/";
       router.replace(redirect);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
       setError(err.data?.error || "Ошибка авторизации");
     }
